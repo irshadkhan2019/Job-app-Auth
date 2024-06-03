@@ -49,14 +49,6 @@ const AuthModel: ModelDefined<IAuthDocument, AuthUserCreationAttributes> & AuthM
     allowNull: false,
     defaultValue: 0
   },
-  browserName: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  deviceType: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
   createdAt: {
     type: DataTypes.DATE,
     defaultValue: Date.now
