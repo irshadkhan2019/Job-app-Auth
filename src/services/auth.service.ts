@@ -22,7 +22,7 @@ export async function createAuthUser(data: IAuthDocument): Promise<IAuthDocument
       createdAt: result.dataValues.createdAt!,
       type: 'auth'
     };
-    // send to queue
+    //Msg published to queue and then user service will act as subscriber to recieve this msg.
     await publishDirectMessage(
       authChannel,
       'jobber-buyer-update', //exchange
